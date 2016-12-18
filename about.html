@@ -40,33 +40,26 @@
 
           <div class="masthead clearfix">
             <div class="inner">
-              <h2 class="masthead-brand"><a href="about.html">CQ</a></h2>
+              <h2 class="masthead-brand"><a href="javascript:void(0)"><span style="color: #CE8483" class="glyphicon glyphicon-heart"> </span> <span style="color: #CE8483;">CQ</span></a></h2>
               <nav>
                 <ul class="nav masthead-nav">
-                  <li><a href="index.html">首页</a></li>
-                  <li><a href="life.html">日常</a></li>
-                  <li><a href="story.html">事迹</a></li>
-                  <li><a href="talking.html">语录</a></li>
-                  <li><a href="hobby.html">爱好</a></li>
-                  <li><a href="footmark.html">足迹</a></li>
-                  <li><a href="singleton.html">点滴</a></li>
+                  <li><a href="index.html"><span style="color: #F8EFC0;" class="glyphicon glyphicon-home"> </span><span style="color: #F8EFC0;"> 首页</span></a></li>
+                  <li><a href="track.html"><span style="color: #419641;" class="glyphicon glyphicon-map-marker"> </span><span style="color: #419641;"> 足迹</span></a></li>
+              		<li><a href="music.html"><span style="color: #EC971F;" class="glyphicon glyphicon-music"> </span><span style="color: #EC971F;"> 音乐</span></a></li>
+                  <li><a href="album.html"><span style="color: #FFFF00;" class="glyphicon glyphicon-camera"> </span><span style="color: #FFFF00;"> 相册</span></a></li>
+                  <li><a href="article.html"><span style="color: #337AB7;" class="glyphicon glyphicon-pencil"> </span><span style="color: #337AB7;"> 文章</span></a></li>
                 </ul>
               </nav>
             </div>
           </div>
-
-          <div class="inner cover">
-          	<h1 class="cover-heading"><font color="#E3E3E3">关于CQ</font></h1>
-	      		<p class="lead">
-	      			<font color="yellowgreen">XiaoXiaoQi, </font><font color="yellow"> We have been in love for</font><br/>
-	      			<div class="lead" style="color: yellow;" id="everyday"></div>
-	      			
-	      		</p>
-	        	<p class="lead" align="right">
-	        		<font color="yellow">Love u forever and ever.<br/></font><font color="yellowgreen">-- Cnzboy</font>
-	        	</p>
-          </div>
           
+          <div class="inner cover">
+          	<p class="lead">
+          		这里将会记录着关于我们的点点滴滴
+          	</p>
+          </div>
+
+
           <div class="mastfoot">
             <div class="inner">
               <p>Cnzboy | Powered by <a href="https://cnzboy.github.io/">@Cnzboy</a></p>
@@ -86,10 +79,7 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
-    
     <script type="text/javascript">
-    	var offsetX = $("#loveHeart").width() / 2;
-			var offsetY = $("#loveHeart").height() / 2 - 55;
 			var together = new Date();
 			together.setFullYear(2016, 1, 11);
 			together.setHours(20);
@@ -120,7 +110,7 @@
 				if (seconds < 10) {
 					seconds = "0" + seconds;
 				}
-				var result = days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds."; 
+				var result = days + " 天 " + hours + " 时 " + minutes + " 分 " + seconds + " 秒 "; 
 				$("#everyday").text(result)
 			}
 		</script>

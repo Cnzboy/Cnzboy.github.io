@@ -40,29 +40,27 @@
 
           <div class="masthead clearfix">
             <div class="inner">
-              <h2 class="masthead-brand"><a href="about.html">CQ</a></h2>
+              <h2 class="masthead-brand"><a href="about.html"><span style="color: #CE8483" class="glyphicon glyphicon-heart"> </span> <span style="color: #CE8483;">CQ</span></a></h2>
               <nav>
                 <ul class="nav masthead-nav">
-                  <li class="active"><a href="javascript:void(0)">首页</a></li>
-                  <li><a href="life.html">日常</a></li>
-                  <li><a href="story.html">事迹</a></li>
-                  <li><a href="talking.html">语录</a></li>
-                  <li><a href="hobby.html">爱好</a></li>
-                  <li><a href="footmark.html">足迹</a></li>
-                  <li><a href="singleton.html">点滴</a></li>
+                  <li class="active"><a href="javascript:void(0)"><span style="color: #F8EFC0;" class="glyphicon glyphicon-home"> </span><span style="color: #F8EFC0;"> 首页</span></a></li>
+                  <li><a href="track.html"><span style="color: #419641;" class="glyphicon glyphicon-map-marker"> </span><span style="color: #419641;"> 足迹</span></a></li>
+              		<li><a href="music.html"><span style="color: #EC971F;" class="glyphicon glyphicon-music"> </span><span style="color: #EC971F;"> 音乐</span></a></li>
+                  <li><a href="album.html"><span style="color: #FFFF00;" class="glyphicon glyphicon-camera"> </span><span style="color: #FFFF00;"> 相册</span></a></li>
+                  <li><a href="article.html"><span style="color: #337AB7;" class="glyphicon glyphicon-pencil"> </span><span style="color: #337AB7;"> 文章</span></a></li>
                 </ul>
               </nav>
             </div>
           </div>
-
+          
           <div class="inner cover">
-            <h1 class="cover-heading">CQ首页</h1>
-            <p class="lead">这个世界不是因为你能做什么，而是你该做什么。
-            	</p><p class="lead" align="right">——马云</p>
-            <p class="lead">
-              <a href="more.html" class="btn btn-lg btn-default">更多</a>
+          	<p class="lead" align="left"><span style=" color: #CE8483" class="glyphicon glyphicon-heart"> </span> <span style="color: #CE8483;">琪，</span><span style="color: #419641;">我们已经一起走过了</span><br/>
+          		<div style="color: #FFFF00;" align="center" class="lead" id="everyday"></div>
+          		<div style="color: #31B0D5;" align="center" class="lead">不管未来有多远，都会有我陪着你</div>
             </p>
+            <p class="lead" align="right"><span style="color: #CE8483" class="glyphicon glyphicon-heart"> </span><span style="color: #CE8483"> 爱你</span><br/><span style="color: #CE8483">-- Cnzboy</span></p>
           </div>
+
 
           <div class="mastfoot">
             <div class="inner">
@@ -83,6 +81,41 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script type="text/javascript">
+			var together = new Date();
+			together.setFullYear(2016, 1, 11);
+			together.setHours(20);
+			together.setMinutes(0);
+			together.setSeconds(0);
+			together.setMilliseconds(0);
+			
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+			
+			function timeElapse(date){
+				var current = Date();
+				var seconds = (Date.parse(current) - Date.parse(date)) / 1000;
+				var days = Math.floor(seconds / (3600 * 24));
+				seconds = seconds % (3600 * 24);
+				var hours = Math.floor(seconds / 3600);
+				if (hours < 10) {
+					hours = "0" + hours;
+				}
+				seconds = seconds % 3600;
+				var minutes = Math.floor(seconds / 60);
+				if (minutes < 10) {
+					minutes = "0" + minutes;
+				}
+				seconds = seconds % 60;
+				if (seconds < 10) {
+					seconds = "0" + seconds;
+				}
+				var result = days + " 天 " + hours + " 时 " + minutes + " 分 " + seconds + " 秒 "; 
+				$("#everyday").text(result)
+			}
+		</script>
   </body>
 
 </html>
